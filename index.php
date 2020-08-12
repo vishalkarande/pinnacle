@@ -76,7 +76,7 @@ include('include/config.php');
 				      </button>
 
 				      <!-- Text Logo -->
-	 <a class="navbar-brand" href="index.html"><img src="images/pinaccle.jpeg" style="height:55px;width:120px"></a>
+	 <a class="navbar-brand" href="index.html"><img src="images/pinnacle2.jpeg" style="height:55px;width:100px"></a>
 
 				      <!-- Image Logo -->
 				      <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
@@ -108,7 +108,7 @@ include('include/config.php');
 
 				<div class="col-md-6 col-sm-6 col-sm-push-6">
 					<div class="mu-hero-right">
-						<img src="images/1000_733.png" alt="Ebook img">
+						<img src="images/cover.jpeg" alt="Ebook img">
 					</div>
 				</div>
 
@@ -283,7 +283,7 @@ include('include/config.php');
 							</div>
 
 							<!-- Start Book Overview Content -->
-							<div class="mu-book-overview-content">
+							<div class="mu-book-overview-content" >
 								<div class="row">
 										<?php
 												
@@ -302,9 +302,9 @@ include('include/config.php');
 
 									<!-- Book Overview Single Content -->
 									<div class="col-md-3 col-sm-6">
-										<div class="mu-book-overview-single">
-											<span class="mu-book-overview-icon-box">
-												<i class="fa fa-area-chart" aria-hidden="true"></i>
+										<div class="mu-book-overview-single" style="padding-top:20px;height: 500px">
+											
+											<a href="book.php">	<img  src="images/books/<?php  echo htmlentities($row['image_name']); ?>" style="height:350px;width:250px">
 												
 											
 												
@@ -313,7 +313,7 @@ include('include/config.php');
 												
 												
 												
-											</span>
+										
 											<h4>	
 											<?php	echo htmlentities($row['name']);
 												
@@ -322,7 +322,11 @@ include('include/config.php');
 											
 											
 											</h4>
-											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
+											<p>		<?php	echo htmlentities($row['discription']);
+												
+												
+												?></p>
+												</a>
 										</div>
 									</div>
 									<!-- / Book Overview Single Content -->
@@ -342,6 +346,7 @@ include('include/config.php');
 		</section>
 		<!-- End Book Overview -->
 
+		
 		
 
 		

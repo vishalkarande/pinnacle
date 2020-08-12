@@ -88,7 +88,7 @@ include('include/config.php');
 				      </button>
 
 				      <!-- Text Logo -->
-	 <a class="navbar-brand" href="index.html"><img src="images/pinaccle.jpeg" style="height:55px;width:120px"></a>
+	    <a class="navbar-brand" href="index.html"><img src="images/pinaccle.png" style="height:55px;width:120px"></a>
 
 				      <!-- Image Logo -->
 				      <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
