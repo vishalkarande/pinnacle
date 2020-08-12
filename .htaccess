@@ -1,0 +1,50 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^/$    index.php    [L]
+
+#RewriteRule ^admin?$    admin/login   [R]
+RewriteRule ^admin/?$    admin/index.php    [NC,L]
+RewriteRule ^admin/login?$    admin/index.php    [NC,L]
+
+
+#change password section
+RewriteRule ^change-password/([A-Za-z0-9-]+)/?$    change-password.php?token=$1    [NC,L]
+RewriteRule ^admin/change-password/([A-Za-z0-9-]+)/?$    admin/changepassword.php?token=$1    [NC,L] 
+RewriteRule ^changepass/([A-Za-z0-9-]+)/?$    changepass.php?token=$1    [NC,L]
+
+RewriteRule ^verify/([A-Za-z0-9-]+)/?$    verify.php?token=$1    [NC,L]
+
+#this is for product section
+RewriteRule ^category/([A-Za-z0-9-]+)/?$    products.php?cslug=$1  [NC,L]
+RewriteRule ^category/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    products.php?cslug=$1&cslug2=$2  [NC,L]
+RewriteRule ^category/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    products.php?cslug=$1&cslug2=$2&cslug3=$3  [NC,L]
+RewriteRule ^product/([A-Za-z0-9-]+)/?$    single-product.php?slug=$1  [NC,L]
+
+#pagination of products
+RewriteRule ^products/page/([0-9-]+)/?$    products.php?page=$1  [NC,L]
+RewriteRule ^category/([A-Za-z0-9-]+)/page/([0-9-]+)/?$    products.php?cslug=$1&page=$2  [NC,L]
+RewriteRule ^category/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/page/([0-9-]+)/?$    products.php?cslug=$1&cslug2=$2&page=$3  [NC,L]
+RewriteRule ^category/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/page/([0-9-]+)/?$    products.php?cslug=$1&cslug2=$2&cslug3=$3&page=$4  [NC,L]
+
+#ajax request
+RewriteRule ^myajax?$    admin/query.php  [NC,L]
+RewriteRule ^my-order-details?$    admin/order-details.php    [NC,L]
+RewriteRule ^myajaxrequest/deletemyaddress/([A-Za-z0-9-]+)/?$    admin/query.php?action=del_user_add&id=$1   [NC,L]
+
+#payment
+RewriteRule ^razorpay/pay/([A-Za-z0-9-]+)/?$    razorpay/pay.php?order_id=$1  [NC,L]
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:granostore.com
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} (www\.)?granostore.com
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:granostore.com
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:granostore.com
+Header always set Content-Security-Policy: upgrade-insecure-requests
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:granostore.com
+

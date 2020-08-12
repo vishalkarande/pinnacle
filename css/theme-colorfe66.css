@@ -1,0 +1,395 @@
+/* 
+Name: Fudink Shopify Thmeme
+Author: HasTech
+*/
+.theme-bg {
+    background: #00a215;
+}
+
+#scrollUp:hover {
+    background: #00a215 none repeat scroll 0 0;
+}
+
+.btn-style:hover {
+    background-color: #00a215;
+    border: 2px solid #00a215;
+}
+.btn-style-2 {
+    background-color: #00a215;
+}
+.account-curr-lang-wrap ul li:hover > a {
+    color: #00a215;
+}
+.account-curr-lang-wrap ul li ul li:hover > a {
+    color: #00a215;
+}
+
+.account-curr-lang-wrap ul li.top-hover ul > li > a::before {
+    background: #00a215 none repeat scroll 0 0;
+}
+.login-text-content > p span,
+.wishlist-text > p span {
+    color: #00a215;
+}
+
+.cart-text > span.cart-digit-bold {
+    color: #00a215;
+}
+.header-cart > a .header-icon-style span {
+    background-color: #00a215;
+}
+
+.shopping-cart-title > h4 a:hover {
+    color: #00a215;
+}
+.shopping-cart-delete > a:hover {
+    border: 2px solid #00a215;
+    color: #00a215;
+}
+.shopping-cart-total > h4 span.shop-total {
+    color: #00a215;
+}
+.shopping-cart-btn a:hover {
+    background-color: #00a215;
+}
+.main-menu ul li:hover > a {
+    color: #00a215;
+}
+
+.main-menu ul li.top-hover ul li > a::before {
+    background: #00a215 none repeat scroll 0 0;
+}
+.slider-btn a:hover {
+    color: #00a215;
+}
+.slider-active.owl-carousel > .owl-nav div:hover {
+    background-color: #00a215;
+}
+.product-tab-list > a.active h4 {
+    color: #00a215;
+}
+
+.pro-action-left > a:hover,
+.pro-action-right > a:hover,
+.product-content > h4 > a:hover {
+    color: #00a215;
+}
+
+.product-price-wrapper > span.product-price-old {
+    color: #00a215;
+}
+
+.product-tab-list-2 a.active h4 {
+    color: #00a215;
+}
+
+.footer-content ul li a:hover,
+.footer-contact li a:hover {
+    color: #00a215;
+}
+
+.footer-time ul li span {
+    color: #00a215;
+}
+.copyright > p a {
+    color: #00a215;
+}
+
+.product-quantity button:hover {
+    background: #00a215 none repeat scroll 0 0;
+}
+
+.modal-header .close:hover {
+    color: #00a215;
+}
+.nav-style.owl-carousel > .owl-nav div:hover {
+    background-color: #00a215;
+}
+
+.breadcrumb-content li {
+    color: #00a215;
+}
+.breadcrumb-content li a:hover {
+    color: #00a215;
+}
+.shop-catigory ul li:hover > a {
+    color: #00a215;
+}
+.shop-catigory ul li:hover > a i {
+    color: #00a215;
+}
+
+.price_filter .ui-slider-range {
+    background: #00a215 none repeat scroll 0 0;
+}
+.price_filter .ui-slider-handle.ui-state-default.ui-corner-all {
+    background: #00a215 none repeat scroll 0 0;
+}
+.price_slider_amount > button:hover {
+    background-color: #00a215;
+}
+.sidebar-list-style ul li a:hover {
+    color: #00a215;
+}
+.compare-product-btn > a:hover {
+    background-color: #00a215;
+}
+.shop-tags a:hover {
+    border: 1px solid #00a215;
+    background-color: #00a215;
+}
+
+.view-mode li.active a {
+    color: #00a215;
+}
+.pagination-style li a:hover,
+.pagination-style li a.active,
+.pagination-style li a.next:hover {
+    background-color: #00a215;
+}
+
+.shop-list-cart-wishlist a:hover {
+    background-color: #00a215;
+}
+.product-list-details h4 a:hover {
+    color: #00a215;
+}
+
+.product-dec-slider .product-dec-icon:hover {
+    color: #00a215;
+}
+
+.product-details-img > span {
+    background-color: #00a215;
+}
+.pro-dec-rating i.theme-star {
+    color: #00a215;
+}
+
+.in-stock > p span {
+    color: #00a215;
+}
+.pro-dec-feature li span {
+    color: #00a215;
+}
+
+.pro-dec-categories li a:hover {
+    color: #00a215;
+}
+
+.description-review-topbar a.active {
+    border-bottom: 2px solid #00a215;
+    color: #00a215;
+}
+
+.ratting-star i {
+    color: #00a215;
+}
+.rating-form-style.form-submit input {
+    background: #00a215 none repeat scroll 0 0;
+}
+.pro-dec-btn > a:hover {
+    background-color: #00a215;
+}
+
+.table-content table td.product-remove a:hover {
+    color: #00a215;
+}
+.cart-shiping-update > a:hover,
+.cart-clear > button:hover,
+.cart-clear > a:hover {
+    background-color: #00a215;
+}
+button.cart-btn-2 {
+    background-color: #00a215;
+}
+h4.grand-totall-title {
+    color: #00a215;
+}
+.grand-totall > a {
+    background-color: #00a215;
+}
+.product-wishlist-cart > a {
+    background-color: #00a215;
+}
+.login-toggle-btn>a:hover {
+    color: #00a215;
+}
+
+.login-register-tab-list.nav a.active h4,
+.login-register-tab-list.nav a h4:hover {
+    color: #00a215;
+}
+.button-box button:hover {
+    background-color: #00a215;
+}
+
+h5.panel-title a:hover {
+    color: #00a215;
+}
+
+.login-forget > a:hover {
+    color: #00a215;
+}
+.login-forget > p {
+    color: #00a215;
+}
+
+.checkout-login-btn > a:hover,
+.checkout-register > a:hover,
+.billing-btn > button:hover {
+    background-color: #00a215;
+}
+.billing-back>a:hover {
+    color: #00a215;
+}
+.billing-back > a i {
+    color: #00a215;
+}
+.billing-back-btn>span a {
+    color: #00a215;
+}
+.edit-address>a:hover {
+    color: #00a215;
+}
+.entries-edit-delete > a:hover,
+.entries-edit-delete > a.edit:hover {
+    background-color: #00a215;
+}
+
+.contact-info-icon i {
+    border: 2px solid #00a215;
+  	color:#00a215;
+}
+.contact-info-wrapper:hover .contact-info-icon i {
+    border: 2px solid #00a215;
+    background-color: #00a215;
+}
+.contact-info-content p a:hover {
+    color: #00a215;
+}
+.submit.btn-style {
+    background-color: #00a215;
+}
+
+.blog-content h2 a:hover {
+    color: #00a215;
+}
+.blog-date-categori li a i,
+.blog-date-categori li i {
+    color: #00a215;
+}
+.blog-date-categori li a:hover {
+    color: #00a215;
+}
+.blog-btn > a {
+    border: 2px solid #00a215;
+    color: #00a215;
+}
+.blog-btn > a:hover {
+    background: #00a215;
+}
+.header-search-form > button:hover {
+    color: #00a215;
+}
+.blog-gallery-slider .owl-nav div:hover {
+    color: #00a215;
+}
+.video-icon > a {
+    color: #00a215;
+}
+.video-icon > a:hover {
+    background-color: #00a215;
+}
+
+.blog-content > p span {
+    color: #00a215;
+}
+.blog-content blockquote {
+    border-left: 5px solid #00a215;
+}
+
+.blog-dec-btn > a {
+    color: #00a215;
+}
+.blog-reply-wrapper form .text-leave input {
+    background-color: #00a215;
+}
+
+.overview-content-2 > h2 span {
+    color: #00a215;
+}
+.overview-content-2 > h2::before {
+    background-color: #00a215;
+}
+.count-title h2 {
+    color: #00a215;
+}
+
+.team-action a {
+    color: #00a215;
+}
+
+.progress-bar {
+    background-color: #00a215;
+}
+
+.testimonial-2-active .owl-nav div:hover {
+    background-color: #00a215;
+}
+
+.testimonials-area-4 .testimonial-active .owl-dot.active {
+    background: #00a215 none repeat scroll 0 0;
+}
+
+.single-work:hover .work-number:before {
+    background: #00a215 none repeat scroll 0 0;
+}
+
+
+
+/*custom css*/
+.onsale span {
+	background-color: #00a215;
+}
+
+.is-active .remove-wishlist-title i{
+  color:#00a215
+}
+.shop-tags li.active a {
+	border: 1px solid #00a215;
+	background-color: #00a215;
+}
+
+.pro-details-cart-wrap .product-cart-action button:hover {
+	background-color: #00a215;
+}
+
+.spr-starrating.spr-badge-starrating i {
+	color: #00a215;
+}
+
+
+.spr-content .spr-button {
+	background-color: #00a215;
+	border: 1px solid #00a215;
+}
+
+.blog-reply-wrapper .text-leave input {
+	background-color: #00a215;
+}
+span.main.amount.price-box__old {
+	color: #00a215;
+}
+.blog-date {
+	background-color: #00a215;
+}
+
+.wc-proceed-to-checkout .form-button:hover {
+	border-color: #00a215;
+	color: #00a215;
+}
+
+.sidebar-list-style ul li.active a {
+	color: #00a215;
+}

@@ -1,0 +1,131 @@
+/* Large screen */
+@media (min-width: 1501px) and (max-width: 1800px){
+
+.custom-container {
+	width: 100%;
+}
+  
+  
+}
+
+
+
+/* Large screen desktop */
+@media (min-width: 1365px) and (max-width: 1500px){
+
+#quickViewModal .close {
+	right: 15%;
+}
+
+}
+
+@media (min-width: 1200px) and (max-width: 1299px){
+
+
+
+}
+
+
+@media (min-width: 1170px) and (max-width: 1299px){
+
+
+
+}
+
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1169px) {
+.shop-list-cart-wishlist {
+	width: 42%;
+}
+
+
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cart-total {
+    margin-top: 30px;
+  }
+.shop-list-cart-wishlist {
+	width: 28%;
+}
+.featured-image #ProductPhotoImg {
+	width: 100%;
+}
+  .description-review-topbar a {
+    margin: 0 13px;
+  }
+
+}
+
+
+/* Small and large mobile :320px. */
+@media (max-width: 767px) {
+  .cart-total {
+    margin-top: 30px;
+  }
+  .cart-buttons .theme-default-button{
+    padding: 8px 20px;
+  }
+  .logo {
+    display: block;
+  }
+  .ltc-sign-out span {
+    top: 0;
+  } 
+  #quickViewModal .close {
+	color: #555;
+	font-size: 30px;
+	right: 10px;
+	top: 150px;
+}
+  .qwick-view-content > h1 {
+    font-size: 24px;
+  }
+
+  .pro-details-cart-wrap .shop-list-cart-wishlist {
+	width: 100%;
+}
+  .pro-details-cart-wrap .product-quantity {
+	width: 100%;
+}
+  
+}
+
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .pro-details-cart-wrap .product-quantity {
+    width: auto;
+  }
+  .pro-details-cart-wrap .shop-list-cart-wishlist {
+    width: 40%;
+  }
+
+}
+
+/* Small Mobile :320px. */
+@media only screen and (max-width: 479px) {
+  .login-form-container {
+    padding: 30px 20px;
+  }
+  .form-action-button .theme-default-button + .theme-default-button, 
+  .cart-buttons .theme-default-button + .theme-default-button{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .form-action-button .theme-default-button,
+  .cart-buttons .theme-default-button,
+  .guest-form-container .theme-default-button{
+    float: left;
+    width: 100%;
+  }
+
+.section-border {
+	margin-right: 0;
+}
+
+}
