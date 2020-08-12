@@ -120,7 +120,7 @@ include('include/config.php');
 								<div class="row">
 									<div class="col-md-6">
 										<div class="mu-author-image">
-											<img src="assets/images/author.jpg" alt="Author Image">
+											<img src="images/1.png" alt="Author Image">
 										</div>
 									</div>
 									<div class="col-md-6">

@@ -109,7 +109,7 @@ include('includes/config.php');
 
 				<div class="col-md-6 col-sm-6 col-sm-push-6">
 					<div class="mu-hero-right">
-						<img src="assets/images/ebook.png" alt="Ebook img">
+						<img src="images/1000_733.png" alt="Ebook img">
 					</div>
 				</div>
 
@@ -319,79 +319,7 @@ include('includes/config.php');
 
 		
 
-		<!-- Start Video Review -->
-		<section id="mu-video-review">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-video-review-area">
-
-							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Check Out Our Video Review</h2>
-								<span class="mu-header-dot"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
-							</div>
-
-							<!-- Start Video Review Content -->
-							<div class="mu-video-review-content">
-								<iframe class="mu-video-iframe" width="100%" height="480" src="https://www.youtube.com/embed/T4ySAlBt2Ug" frameborder="0" allowfullscreen></iframe>
-							</div>
-							<!-- End Video Review Content -->
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Video Review -->
-
-		<!-- Start Author -->
-		<section id="mu-author">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-author-area">
-
-							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">About The Author</h2>
-								<span class="mu-header-dot"></span>
-							</div>
-
-							<!-- Start Author Content -->
-							<div class="mu-author-content">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="mu-author-image">
-											<img src="assets/images/author.jpg" alt="Author Image">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="mu-author-info">
-											<h3>John Doe</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo suscipit facilis ipsum ullam reiciendis odio error iste neque ratione libero rem accusamus voluptatibus, nihil unde maiores sunt nisi. Assumenda, consectetur.</p>
-
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, dolorem error neque! Dolores similique ut iusto odit esse ipsam, nesciunt pariatur animi minima maiores mollitia cupiditate ad ipsum deleniti perspiciatis!</p>
-											<img class="mu-author-sign" src="assets/images/author-signature.png" alt="Author Signature">
-
-											<div class="mu-author-social">
-												<a href="#"><i class="fa fa-facebook"></i></a>
-												<a href="#"><i class="fa fa-twitter"></i></a>
-												<a href="#"><i class="fa fa-linkedin"></i></a>
-												<a href="#"><i class="fa fa-google-plus"></i></a>
-											</div>
-
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- End Author Content -->
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Author -->
+		
 
 		<!-- Start Pricing -->
 		<section id="mu-pricing">
@@ -403,7 +331,7 @@ include('includes/config.php');
 							<div class="mu-heading-area">
 								<h2 class="mu-heading-title">Our Pricing Plans</h2>
 								<span class="mu-header-dot"></span>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+								<p>Exclusive offers for You </p>
 							</div>
 
 							<!-- Start Pricing Content -->
@@ -415,17 +343,16 @@ include('includes/config.php');
 										<div class="mu-pricing-single">
 
 											<div class="mu-pricing-single-head">
-												<h4>STANDARD PLAN</h4>
+												<h4>BASIC PACKAGE</h4>
 												<p class="mu-price-tag">
-													<span>$</span> 15
+													<span>RS</span> 500
 												</p>
 											</div>
 
 											<ul class="mu-price-feature">
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
+												<li> 5 Journals  </li>
+												<li> 5 Chapters</li>
+											
 											</ul>
 
 											<div class="mu-pricing-single-footer">
@@ -442,17 +369,16 @@ include('includes/config.php');
 
 
 											<div class="mu-pricing-single-head">
-												<h4>PROFESSIONAL PLAN</h4>
+												<h4>STANDARD PACKAGE</h4>
 												<p class="mu-price-tag">
-													<span>$</span> 25
+													<span>RS</span> 1000
 												</p>
 											</div>
 
 											<ul class="mu-price-feature">
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
+												<li> 10 Journals </li>
+												<li> 10 Chapters </li>
+											
 											</ul>
 
 											<div class="mu-pricing-single-footer">
@@ -470,17 +396,17 @@ include('includes/config.php');
 
 
 											<div class="mu-pricing-single-head">
-												<h4>EXCLUSIVE PLAN</h4>
+												<h4>FULL PACKAGE</h4>
 												<p class="mu-price-tag">
-													<span>$</span> 45
+													<span>RS</span> 2000
 												</p>
 											</div>
 
 											<ul class="mu-price-feature">
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
-												<li> Lorem ipsum dolor sit amet. </li>
+											
+												<li> Unlimited Journal </li>
+												<li> Unlimited Chapters </li>
+												
 											</ul>
 
 											<div class="mu-pricing-single-footer">
