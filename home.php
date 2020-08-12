@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-include('includes/config.php');
+include('include/config.php');
 
 
 
@@ -76,7 +76,7 @@ include('includes/config.php');
 				      </button>
 
 				      <!-- Text Logo -->
-				      <a class="navbar-brand" href="index.html"><i class="fa fa-book" aria-hidden="true"></i> Kindle</a>
+	 <a class="navbar-brand" href="index.html"><img src="images/pinaccle.jpeg" style="height:55px;width:120px"></a>
 
 				      <!-- Image Logo -->
 				      <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
@@ -87,12 +87,11 @@ include('includes/config.php');
 				    <!-- Collect the nav links, forms, and other content for toggling -->
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				      	<ul class="nav navbar-nav mu-menu navbar-right">
-					        <li><a href="#">HOME</a></li>
-					        <li><a href="#mu-book-overview">OVERVIEW</a></li>
-					        <li><a href="#mu-author">AUTHOR</a></li>
-				            <li><a href="#mu-pricing">PRICE</a></li>
-				            <li><a href="#mu-testimonials">TESTIMONIALS</a></li>
-				            <li><a href="#mu-contact">CONTACT</a></li>
+					         <li><a href="home.php">HOME</a></li>
+					        <li><a href="aboutus.php">ABOUT US</a></li>
+					        <li><a href="book.php">BOOKS</a></li>
+				            
+				            <li><a href="contact.php">CONTACT</a></li>
 				      	</ul>
 				    </div><!-- /.navbar-collapse -->
 			  	</div><!-- /.container-fluid -->

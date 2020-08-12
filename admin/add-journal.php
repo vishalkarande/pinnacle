@@ -8,39 +8,31 @@ $prependScript='
 require_once('templates/header.php');
 require_once('templates/sidebar.php');
 if(isset($_POST['submit'])) {
-  pr($_POST);die;
+  //pr($_POST);die;
   $where = 'name ="'.trim(strip_tags($_REQUEST['name'])).'"';
-  $data = $QueryFire->getAllData('journals',$where);
+  $data = $QueryFire->getAllData('journal',$where);
   if(!empty($data)) {
     $error = 'journal already exist !';
-  } else { 
+  } else {
     if(isset($_FILES) && !empty($_FILES['file_upload']['tmp_name'])) {
       $ret = $QueryFire->fileUpload($_FILES['file_upload'],'../images/journals/');
       if($ret['status'] && isset($ret['image_name'])) {
         $arr = array();
-        
+
        
         $arr['name'] = trim(strip_tags($_REQUEST['name']));
         $_REQUEST['type_id'] = trim(strip_tags($_REQUEST['type_id']));
         if(!empty($_REQUEST['type_id'])){
           $arr['type_id'] = $_REQUEST['type_id'];
         }
-        $_REQUEST['domain'] = trim(strip_tags($_REQUEST['domain']));
-        if(!empty($_REQUEST['domain'])){
-          $arr['domain'] = $_REQUEST['domain'];
-        }
-         $arr['author'] = trim(strip_tags($_REQUEST['author']));
-        
         $arr['publish_date'] = trim(strip_tags($_REQUEST['pdate']));
-      
         $arr['quantity'] = trim(strip_tags($_REQUEST['quantity']));
+        //$arr['discount'] = trim(strip_tags($_REQUEST['discount']));
+        $arr['type_id'] = trim(strip_tags($_REQUEST['type_id']));
        
-      
-         
-       // $arr['is_deleted'] = trim(strip_tags($_REQUEST['is_deleted']));
-       
-       $arr['image_name'] = $ret['image_name'];
+        $arr['author_id'] = trim(strip_tags($_REQUEST['a_id']));
         $arr['synopsis'] = htmlentities(addslashes($_POST['synopsis']));
+        $arr['image_name'] = $ret['image_name'];
         //pr($arr);die;
         if($QueryFire->insertData('journal',$arr)) {
           //get last id
@@ -51,7 +43,7 @@ if(isset($_POST['submit'])) {
             if($ret1['status'] && isset($ret1['image_name'][0])) {
               foreach($ret1['image_name'] as $img) {
                 $QueryFire->insertData('',array('image_name'=>$img,'journal_id'=>$last_id));
-             }
+              }
             }
           }
           $msg = 'journal added successfully.';
@@ -65,8 +57,8 @@ if(isset($_POST['submit'])) {
   }
 }
 $types= $QueryFire->getAllData('journal_type',' is_deleted=0 order by name');
-$domain= $QueryFire->getAllData('domain',' is_deleted=0 order by name');
-
+$authors= $QueryFire->getAllData('author',' is_deleted=0 order by name');
+$domains=$QueryFire->getAllData('domain',' is_deleted=0 order by name');
 
 ?>
   <section class="content-header">
@@ -99,11 +91,11 @@ $domain= $QueryFire->getAllData('domain',' is_deleted=0 order by name');
                     <input type="text" name="name" class="form-control" placeholder="Enter journal Name">
                   </div>
                 </div>
-                <div class="col-sm-5 col-md-5 col-xs-12">
+                <div class="col-sm-4 col-md-4 col-xs-12">
                   <div class="form-group">
-                    <label for="type_id"> Type</label>
-                    <select class="form-control category" name="type_id">
-                      <option value=""> -- Select Type-- </option>
+                    <label for="type_id"> type</label>
+                    <select class="form-control type" name="type_id">
+                      <option value=""> -- Select type -- </option>
                       <?php if(!empty($types )) {
                         foreach($types as $type) {
                           echo '<option value="'.$type['id'].'">'.$type['name'].'</option>';
@@ -112,40 +104,45 @@ $domain= $QueryFire->getAllData('domain',' is_deleted=0 order by name');
                     </select>
                   </div>
                 </div>
-                <div class="col-sm-4 col-md-4 col-xs-12">
+                  <div class="col-sm-4 col-md-4 col-xs-12">
                   <div class="form-group">
-                    <label for="domain">Domain</label>
-                    <select class="form-control category" name="domain">
+                    <label for="domain_id">Domain</label>
+                    <select class="form-control type" name="domain_id">
                       <option value=""> -- Select Domain -- </option>
-                      <?php if(!empty($domain )) {
-                        foreach($domain as $d) {
-                          echo '<option value="'.$d['id'].'">'.$d['name'].'</option>';
+                      <?php if(!empty($domains)) {
+                        foreach($domains as $domain) {
+                          echo '<option value="'.$domain['id'].'">'.$domain['name'].'</option>';
                         }
                       } ?>
                     </select>
                   </div>
                 </div>
-               <div class="col-sm-4 col-md-4 col-xs-12">
-                  <label for="author">Author:</label>
-                  <input class="form-control" name="author" placeholder="Enter Author" >
-                </div>
-                 <div class="col-sm-4 col-md-4 col-xs-6">
+                <div class="col-sm-4 col-md-4 col-xs-12">
                   <div class="form-group">
                     <label for="pdate">Publish Date</label>
-                    <input type="date" name="pdate" class="form-control" placeholder="Enter journal Quantity">
+                    <input type="date" name="pdate" class="form-control" placeholder="Enter Publish Date">
                   </div>
                 </div>
-                <div class="col-sm-2 col-md-2 col-xs-6">
+                <div class="col-sm-4 col-md-4 col-xs-6">
                   <div class="form-group">
                     <label for="quantity">Quantity</label>
                     <input type="text" name="quantity" class="form-control" placeholder="Enter journal Quantity">
                   </div>
                 </div>
                
-                
-               
-               
-                
+               <div class="col-sm-5 col-md-5 col-xs-12">
+                  <div class="form-group">
+                    <label for="a_id"> Author</label>
+                    <select class="form-control type" name="a_id">
+                      <option value=""> -- Select type -- </option>
+                      <?php if(!empty($authors)) {
+                        foreach($authors as $author) {
+                          echo '<option value="'.$author['id'].'">'.$author['name'].'</option>';
+                        }
+                      } ?>
+                    </select>
+                  </div>
+                </div>
                
                 <div class="col-sm-6 col-md-6 col-xs-12">
                   <div class="form-group">
@@ -161,7 +158,7 @@ $domain= $QueryFire->getAllData('domain',' is_deleted=0 order by name');
                 <div class="col-sm-12 col-md-12 col-xs-12">
                   <div class="form-group">
                     <label for="synopsis">Synopsis</label>
-                    <textarea name="synopsis"  placeholder="Enter synopsis" rows="6" class="form-control summernote"></textarea>
+                    <textarea name="synopsis"  placeholder="Enter journal Description" rows="6" class="form-control summernote"></textarea>
                   </div>
                 </div>
             </div>
@@ -205,17 +202,17 @@ $appendScript = '
           }
         });
       });
-      $(".category").on("change",function(){
+      $(".type").on("change",function(){
         $.ajax({
           url:"query",
           method:"post",
           data:{action:"getsubcat",id:$(this).val()},
           success:function(response){
             if(response !="") {
-              $(".sub_category").removeClass("hide");
-              $(".sub_category select").html(response);
+              $(".sub_type").removeClass("hide");
+              $(".sub_type select").html(response);
             } else {
-              $(".sub_category").addClass("hide");
+              $(".sub_type").addClass("hide");
             }
           }
         });
@@ -250,7 +247,7 @@ $appendScript = '
             number:true
           },
           
-          sub_category: {
+          sub_type: {
             required: true,
           },
           
@@ -275,8 +272,8 @@ $appendScript = '
           },
           
           
-          sub_category: {
-            required: "Select Sub Category",
+          sub_type: {
+            required: "Select Sub type",
           },
           price: {
             required: "Enter journal price",

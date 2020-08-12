@@ -11,34 +11,14 @@ $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
 
 	
 	
+		
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	$ret=mysqli_query($con,"select books.name as pname   from books left join books_category on books.cat_id=books_category.id where books_category.id= 2");
-$num=mysqli_num_rows($ret);
-	if($num>0)
-	{
-while ($row=mysqli_fetch_array($ret)) {
-	
-	
-	
-echo $row['pname'];
-
-}
 
 	
 	
 	
-	
-	
-	
-}
 	
 	
 }*/

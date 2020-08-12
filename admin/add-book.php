@@ -30,7 +30,7 @@ if(isset($_POST['submit'])) {
         $arr['discount'] = trim(strip_tags($_REQUEST['discount']));
         $arr['cat_id'] = trim(strip_tags($_REQUEST['cat_id']));
        
-        $arr['author'] = trim(strip_tags($_REQUEST['author']));
+        $arr['author_id'] = trim(strip_tags($_REQUEST['a_id']));
          
        // $arr['is_deleted'] = trim(strip_tags($_REQUEST['is_deleted']));
        
@@ -60,6 +60,8 @@ if(isset($_POST['submit'])) {
   }
 }
 $category= $QueryFire->getAllData('books_category',' is_deleted=0 order by name');
+$authors= $QueryFire->getAllData('author',' is_deleted=0 order by name');
+
 
 ?>
   <section class="content-header">
@@ -134,14 +136,19 @@ $category= $QueryFire->getAllData('books_category',' is_deleted=0 order by name'
                     </div>
                   </div>
                 </div>
-                
-               
-               
-                <div class="col-sm-4 col-md-4 col-xs-12">
-                  <label for="author">Author:</label>
-                  <input class="form-control" name="author" placeholder="Enter Author" >
+               <div class="col-sm-5 col-md-5 col-xs-12">
+                  <div class="form-group">
+                    <label for="a_id"> Author</label>
+                    <select class="form-control category" name="a_id">
+                      <option value=""> -- Select Category -- </option>
+                      <?php if(!empty($authors)) {
+                        foreach($authors as $author) {
+                          echo '<option value="'.$author['id'].'">'.$author['name'].'</option>';
+                        }
+                      } ?>
+                    </select>
+                  </div>
                 </div>
-              
                
                 <div class="col-sm-6 col-md-6 col-xs-12">
                   <div class="form-group">

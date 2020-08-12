@@ -80,7 +80,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="book-sub-category" class="nav-link <?php echo (isset($active_sub_tab) && trim($active_sub_tab) == 'Books' ) ? 'active': ''; ?>">
+              <a href="books-sub-category" class="nav-link <?php echo (isset($active_sub_tab) && trim($active_sub_tab) == 'Books' ) ? 'active': ''; ?>">
                <i class="fa fa-book" aria-hidden="true"></i>
                 <p>Sub Category</p>
               </a>
@@ -104,12 +104,7 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="journals" class="nav-link <?php echo (isset($active_sub_tab) && trim($active_sub_tab) == 'Journals' ) ? 'active': ''; ?>">
-               <i class="fa fa-book" aria-hidden="true"></i>
-                <p>Journals</p>
-              </a>
-            </li>
+            
             <li class="nav-item">
               <a href="j-category" class="nav-link <?php echo (isset($active_sub_tab) && trim($active_sub_tab) == 'Journal Types' ) ? 'active': ''; ?>">
                 <i class="fa fa-book" aria-hidden="true"></i>
@@ -122,14 +117,20 @@
                 <p>Domain</p>
               </a>
             </li>
-          </ul>
+         
+        <li class="nav-item">
+              <a href="journals" class="nav-link <?php echo (isset($active_sub_tab) && trim($active_sub_tab) == 'Journals' ) ? 'active': ''; ?>">
+               <i class="fa fa-book" aria-hidden="true"></i>
+                <p>Journals</p>
+              </a>
+            </li>
+        </ul>
         </li>
-       
 <!----- end Journals managemnet------------------->
 <!-----Journals managemnet------------------->
 
          <li class="nav-item has-treeview <?php echo (isset($active_tab) && trim($active_tab) == 'gallery' ) ? 'menu-open': ''; ?>">
-          <a href="chapter" class="nav-link <?php echo (isset($active_tab) && trim($active_tab) == 'Chapter Management' ) ? 'active': ''; ?>">
+          <a href="chapters" class="nav-link <?php echo (isset($active_tab) && trim($active_tab) == 'Chapter Management' ) ? 'active': ''; ?>">
            <i class="fa fa-list-alt" aria-hidden="true"></i>
             <p>Chapter 
               
@@ -139,6 +140,22 @@
         
         </li>
   
+   <li class="nav-item">
+          <a href="events" class="nav-link <?php echo (isset($active_tab) && trim($active_tab) == 'events' ) ? 'active': ''; ?>">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <p>
+             Events
+            </p>
+          </a>
+        </li>
+         <li class="nav-item">
+          <a href="readers" class="nav-link <?php echo (isset($active_tab) && trim($active_tab) == 'testimonials' ) ? 'active': ''; ?>">
+         <i class='fas fa-book-reader' style='font-size:18px'></i>
+            <p>
+              Readers
+            </p>
+          </a>
+        </li>
         <li class="nav-item">
           <a href="users" class="nav-link <?php echo (isset($active_tab) && trim($active_tab) == 'users' ) ? 'active': ''; ?>">
             <i class="fas fa-users nav-icon"></i>

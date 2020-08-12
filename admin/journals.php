@@ -11,8 +11,8 @@ $prependScript="<style>
 </style>";
 require_once('templates/header.php');
 require_once('templates/sidebar.php');
-$journals = $QueryFire->getAllData('journal','is_deleted=0 ','SELECT j.* , jt.name as type FROM journal as j  LEFT JOIN journal_type as jt ON jt.id=j.type_id WHERE j.is_deleted=0');
-pr($journals);
+$journals = $QueryFire->getAllData('journal','is_deleted=0 ','SELECT j.* , jt.name as type , d.name as domain , a.name as author FROM journal as j  LEFT JOIN journal_type as jt ON jt.id=j.type_id  LEFT JOIN domain as d on d.id=j.domain_id LEFT JOIN author as a ON a.id=j.author_id WHERE j.is_deleted=0');
+
 ?>
   <section class="content-header">
     <div class="container-fluid">
@@ -60,7 +60,7 @@ pr($journals);
 
                     <td><?php echo ucfirst($journal['name']);?></td>
                     <td><?php echo ucfirst($journal['type']);?></td>
-                    <td><?php echo ucfirst($journal['domain_id']);?></td>
+                    <td><?php echo ucfirst($journal['domain']);?></td>
                     <td><?php echo $journal['author'];?></td>
                     <td><?php echo $journal['synopsis'];?></td>
                     <td><?php echo $journal['publish_date'];?></td>

@@ -11,8 +11,8 @@ $prependScript="<style>
 </style>";
 require_once('templates/header.php');
 require_once('templates/sidebar.php');
-$books = $QueryFire->getAllData('books',' is_deleted=0 ','SELECT b.*,c.name as category FROM books as b LEFT JOIN books_category as c ON c.id=b.cat_id WHERE b.is_deleted=0');
-//pr($books);
+
+$books = $QueryFire->getAllData('books',' is_deleted=0 ','SELECT b.*,c.name as category,  a.name as author FROM books as b LEFT JOIN books_category as c ON c.id=b.cat_id LEFT JOIN author as a ON b.author_id=a.id WHERE b.is_deleted=0');
 ?>
   <section class="content-header">
     <div class="container-fluid">

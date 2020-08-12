@@ -55,7 +55,7 @@ if(isset($_POST['submit'])) {
         $ret1 = $QueryFire->multipleFileUpload($_FILES['images'],'../images/books/');
         if($ret1['status'] && isset($ret1['image_name'][0])) {
           foreach($ret1['image_name'] as $img) {
-            $QueryFire->insertData('books_has_images',array('image_name'=>$img,'book_id'=>$_REQUEST['book_id']));
+            $QueryFire->insertData('books',array('image_name'=>$img,'book_id'=>$_REQUEST['book_id']));
           }
         }
       }
@@ -67,7 +67,7 @@ if(isset($_POST['submit'])) {
 }
 $categories = $QueryFire->getAllData('categories',' is_show=1 and level=1 and is_deleted=0 order by name');
 $images = $QueryFire->getAllData('books',' book_id='.$_REQUEST['book_id']);
-$params = $QueryFire->getAllData('books','is_deleted=0 order by name');
+
 $book = $QueryFire->getAllData('books','id='.$_REQUEST['book_id'])[0];
 $book_cat = $categories[array_search($book['cat_id'], array_column($categories, 'id'))];
 $main_cat = $book_cat['cat_id']==0?$book['cat_id']:$book_cat['cat_id'];

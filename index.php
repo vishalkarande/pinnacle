@@ -1,160 +1,594 @@
 <?php
-$active_tab = 'Home';
-require_once('header.php');
-require_once('menu.php');
-$sliders = $QueryFire->getAllData('sliders',' is_show=1');
-$adSliders = $QueryFire->getAllData('ad_sliders',' is_show=1');
-$testimonials = $QueryFire->getAllData('testimonials',' is_show=1 limit 6');
-$clients = $QueryFire->getAllData('clients',' is_show=1 order by id ');
-//$products = $QueryFire->getAllData('products',' ','SET @I=0; SET @C=""; SELECT id,name, cat_id,slug,image_name FROM ( SELECT B.*, IF(@C != B.cat_id, @I:=1, @I:=@I+1) AS RowNum, @C:=B.cat_id FROM ( SELECT id, name, cat_id,slug,image_name FROM products WHERE is_show=1 and qty>0 and is_deleted=0 and trendings=1 GROUP BY cat_id ORDER BY cat_id limit 20 ) AS B HAVING RowNum <= 3 ) AS A');
-if(!empty($sliders)) { ?>
-<div class="slider-area">
-	<div class="slider-active owl-dot-style owl-carousel">
-		<?php foreach($sliders as $slider) { ?>
-			<div class="single-slider">
-			    <img src="<?= base_url.'images/sliders/'.$slider['image_name'] ?>" alt="Slider Image" />
+session_start();
+error_reporting(0);
+include('include/config.php');
+
+
+
+
+
+
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+	
+	
+	
+	
+	
+	
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Kindle : Home</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico"/>
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+    <!-- Lato for Title -->
+  	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+ 
+ 
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+   	
+  	<!-- Start Header -->
+	<header id="mu-header" class="" role="banner">
+		<div class="container">
+			<nav class="navbar navbar-default mu-navbar">
+			  	<div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+
+				      <!-- Text Logo -->
+	 <a class="navbar-brand" href="index.html"><img src="images/pinaccle.jpeg" style="height:55px;width:120px"></a>
+
+				      <!-- Image Logo -->
+				      <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
+
+
+				    </div>
+
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      	<ul class="nav navbar-nav mu-menu navbar-right">
+					         <li><a href="index.php">HOME</a></li>
+					        <li><a href="aboutus.php">ABOUT US</a></li>
+					        <li><a href="book.php">BOOKS</a></li>
+				            
+				            <li><a href="contact.php">CONTACT</a></li>
+				      	</ul>
+				    </div><!-- /.navbar-collapse -->
+			  	</div><!-- /.container-fluid -->
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- Start Featured Slider -->
+
+	<section id="mu-hero">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 col-sm-6 col-sm-push-6">
+					<div class="mu-hero-right">
+						<img src="images/1000_733.png" alt="Ebook img">
+					</div>
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-sm-pull-6">
+					<div class="mu-hero-left">
+						<h1>Perfect Landing Page Template to Present Your eBook</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam saepe, recusandae quidem nulla! Eveniet explicabo perferendis aut, ab quos omnis labore laboriosam quisquam hic deserunt ipsum maxime aspernatur velit impedit.</p>
+						<a href="#" class="mu-primary-btn">Download Now!</a>
+						<span>*Avaliable in PDF, ePUB, Mobi & Kindle.</span>
+					</div>
+				</div>	
+
 			</div>
-		<?php } ?>
-	</div> 
-</div>
-<?php } ?>
-<div class="product-area mt-40">
-    <div class="custom-container">
-        <div class="banner-area">
-            <div class="row">
-               <div class="col-md-3 col-sm-3 col-xs-12"></div>
-               <div class="col-md-6 col-sm-6 col-xs-12">
-                   <form action="<?= base_url?>products" name="search_product" method="post">
-                        <div class="input-group">
-                            <input type='text' required class="form-control search_input" name="search" minlength='3' placeholder="Search for products" value="<?= isset($_POST['search'])?$_POST['search']:'' ?>" />
-                            <span class="input-group-addon search"><i class="fa fa-search"></i></span>
-                        </div>
-                    </form>
-               </div>
-               <div class="col-md-3 col-sm-3 col-xs-12"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<?php if(!empty($adSliders)) { ?>
-<div class="banner-area mt-40">
-    <div class="container">
-	    <div class="slider-active owl-dot-style owl-carousel">
-		<?php foreach($adSliders as $slider) { ?>
-			<div class="single-slider discount-overlay" >
-			    <img src="<?= base_url.'images/sliders/'.$slider['image_name'] ?>" alt="Slider Image">
-			</div>
-		<?php } ?>
-	</div> 
-	</div>
-</div>
-<?php } if(!empty($categories)) { ?>
-	<div class="product-area mt-40">
-		<div class="custom-container">
-           <div class="product-tab-list-wrap text-center mb-40">
-              <div class="product-tab-list">
-              	<div class="row">
-					<?php foreach($categories as $cat) { ?>
-						<div class="col-md-4 col-sm-4 col-6">
-							<div class="product-wrapper mb-25">
-								<div class="product-img">
-									<a href="<?= base_url.'category/'.$cat['slug']?>">
-										<img src="<?= base_url.'images/categories/'.$cat['image_name']?>" alt="product_image">
-									</a>
+		</div>
+	</section>
+	
+	<!-- Start Featured Slider -->
+	
+	<!-- Start main content -->
+		
+	<main role="main">
+
+		<!-- Start Counter -->
+		<section id="mu-counter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-counter-area">
+
+							<div class="mu-counter-block">
+								<div class="row">
+
+									<!-- Start Single Counter -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-single-counter">
+											<i class="fa fa-files-o" aria-hidden="true"></i>
+											<div class="counter-value" data-count="650">0</div>
+											<h5 class="mu-counter-name">Total Books</h5>
+										</div>
+									</div>
+									<!-- / Single Counter -->
+
+									<!-- Start Single Counter -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-single-counter">
+											<i class="fa fa-file-text-o" aria-hidden="true"></i>
+											<div class="counter-value" data-count="422">0</div>
+											<h5 class="mu-counter-name">Total journal</h5>
+										</div>
+									</div>
+									<!-- / Single Counter -->
+
+									<!-- Start Single Counter -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-single-counter">
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<div class="counter-value" data-count="1055">0</div>
+											<h5 class="mu-counter-name">Active Readers</h5>
+										</div>
+									</div>
+									<!-- / Single Counter -->
+
+									<!-- Start Single Counter -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-single-counter">
+											<i class="fa fa-trophy" aria-hidden="true"></i>
+											<div class="counter-value" data-count="03">0</div>
+											<h5 class="mu-counter-name">Total Chapters</h5>
+										</div>
+									</div>
+									<!-- / Single Counter -->
+
 								</div>
-                                <div class="product-content">
-                                    <h4>
-                                        <a href="<?= base_url.'category/'.$cat['slug']?>"><?= $cat['name']?></a>
-                                    </h4>
-                                </div>
 							</div>
+
+
 						</div>
-					<?php } ?>
+					</div>
 				</div>
-              </div>
-           </div>
-		</div>
-	</div>
-<?php } if(!empty($testimonials)){?>
-    <style>
-        .testimonial-4-img{
-            border: 1px solid rgba(180,180,180,0.7) !important;
-            padding: 20px;
-        }
-    </style>
-	<div class="testimonials-area-4 mt-40 mb-40">
-	    <div class="container">
-	        <div class=" text-center">
-              <h3 class="mt-30 mb-20"><strong>Testimonials</strong></h3>
-           </div>
-		    <div class="testimonial-2-active owl-dot-style owl-carousel">
-			<?php foreach($testimonials as $testimonial) { ?>
-				<div class="testimonial-2-wrapper" >
-			        <div class="testimonial-4-img">
-			            <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <div class="testimonial-2-img">
-                                    <img src="<?php echo base_url.'/images/testimonials/'.$testimonial['image_name']?>" alt="<?php echo $testimonial['name']?>" class="img-responsive img-thumbnail" />
-                                    <h4 class="mt-10 text-center"><?php echo ucwords(strtolower($testimonial['name']))?></h4>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                              <h5><strong><?php echo $testimonial['title']?></strong></h5>
-                              <p class="testimonial-content text-justify">
-                                <?= makeShortString($testimonial['opinion'],280) ?>
-                              </p>
-                            </div>
-                        </div>
-			        </div>
-				</div>
-			<?php } ?>
-			</div> 
-		</div>
-	</div>
-<?php } if($clients){ ?>
-<style>
-    .brand-logo-active img {
-        height:90px;
-    }
-</style>
-<div class="brand-logo-area bg-light pt-20 pb-40">
-  <div class="container">
-      <div class=" text-center">
-          <h3 class="mb-20"><strong>Our Partners</strong></h3>
-       </div>
-    <div class="brand-logo-active owl-carousel owl-loaded owl-drag">
-        <?php foreach($clients as $client) { ?>
-			<div class="item" >
-                <img src="<?php echo base_url.'/images/clients/'.$client['image_name']?>" alt="<?php echo $client['name']?>" class="img-responsive img-thumbnail" />
 			</div>
-		<?php } ?>
-	</div>
-  </div>
-<?php } require_once('footer.php'); ?>
-<script>
-    jQuery('.search').on('click',function() {
-        if(jQuery('.search_input').val().length > 2)
-            document.search_product.submit();
-        jQuery('.search_input').focus();
-    });
-    $('.brand-logo-active').owlCarousel({
-    margin:10,
-    loop: true,
-    nav:false,
-    autoplay: true,
-    autoplayTimeout: 6000,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    responsive:{
-        0:{
-            items:3
-        },
-        600:{
-            items:5
-        },
-        1000:{
-            items:9
-        }
-    }
-})
-</script>
+		</section>
+		<!-- End Counter -->
+
+		
+
+		<!-- Start Book Overview -->
+		<section id="mu-book-overview" style="padding-top:30px">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-book-overview-area">
+
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title">All Books</h2>
+								<span class="mu-header-dot"></span>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+							
+								
+								
+								
+								
+								
+								
+								
+											
+								  	<!-- Start Header -->
+
+		<div class="container" style=" float: left;" >
+			<nav class="navbar navbar-default mu-navbar">
+			  	<div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				     <div class="navbar-header" >
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false" style=" background-color: #1c1b1b;">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+
+				      <!-- Text Logo -->
+				    
+
+				      <!-- Image Logo -->
+				      <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
+
+
+				    </div>
+
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" >
+				      	<ul class="nav navbar-nav mu-menu navbar-right" style=" background-color: #fc9547;">
+					        <li><a href="book.php">All Books</a></li>
+					        <li><a href="technicalbooks.php">Technical</a></li>
+					        <li><a href="nontech.php">Non-Technical</a></li>
+				            <li><a href="#mu-pricing">Magzines</a></li>
+				            <li><a href="#mu-testimonials">News Letters</a></li>
+				          
+				      	</ul>
+				    </div><!-- /.navbar-collapse -->
+			  	</div><!-- /.container-fluid -->
+			</nav>
+		</div>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+							</div>
+
+							<!-- Start Book Overview Content -->
+							<div class="mu-book-overview-content">
+								<div class="row">
+										<?php
+												
+												$ret=mysqli_query($con,"select * from books ");
+												
+	
+												
+															while($row=mysqli_fetch_array($ret)){
+		
+		
+		
+														
+												
+												
+												?>
+
+									<!-- Book Overview Single Content -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-book-overview-single">
+											<span class="mu-book-overview-icon-box">
+												<i class="fa fa-area-chart" aria-hidden="true"></i>
+												
+											
+												
+												
+												
+												
+												
+												
+											</span>
+											<h4>	
+											<?php	echo htmlentities($row['name']);
+												
+												
+												?>
+											
+											
+											</h4>
+											<p>Lorem ipsum dolor sit amet, consect adipis elit minim veniam ettis inkeras.</p>
+										</div>
+									</div>
+									<!-- / Book Overview Single Content -->
+									
+									<?php } ?>
+
+									
+
+								</div>
+							</div>
+							<!-- End Book Overview Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Book Overview -->
+
+		
+
+		
+
+		<!-- Start Pricing -->
+		<section id="mu-pricing">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-pricing-area">
+
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title">Our Pricing Plans</h2>
+								<span class="mu-header-dot"></span>
+								<p>Exclusive offers for You </p>
+							</div>
+
+							<!-- Start Pricing Content -->
+							<div class="mu-pricing-content">
+								<div class="row">
+
+									<!-- Pricing Single Content -->
+									<div class="col-sm-6 col-md-4">
+										<div class="mu-pricing-single">
+
+											<div class="mu-pricing-single-head">
+												<h4>BASIC PACKAGE</h4>
+												<p class="mu-price-tag">
+													<span>RS</span> 500
+												</p>
+											</div>
+
+											<ul class="mu-price-feature">
+												<li> 5 Journals  </li>
+												<li> 5 Chapters</li>
+											
+											</ul>
+
+											<div class="mu-pricing-single-footer">
+												<a href="#" class="mu-order-btn">Order Now!</a>
+											</div>
+
+										</div>
+									</div>
+									<!-- / Pricing Single Content -->
+
+									<!-- Pricing Single Content -->
+									<div class="col-sm-6 col-md-4">
+										<div class="mu-pricing-single mu-popular-price-tag">
+
+
+											<div class="mu-pricing-single-head">
+												<h4>STANDARD PACKAGE</h4>
+												<p class="mu-price-tag">
+													<span>RS</span> 1000
+												</p>
+											</div>
+
+											<ul class="mu-price-feature">
+												<li> 10 Journals </li>
+												<li> 10 Chapters </li>
+											
+											</ul>
+
+											<div class="mu-pricing-single-footer">
+												<a href="#" class="mu-order-btn">Order Now!</a>
+											</div>
+											
+
+										</div>
+									</div>
+									<!-- / Pricing Single Content -->
+
+									<!-- Pricing Single Content -->
+									<div class="col-sm-6 col-md-4">
+										<div class="mu-pricing-single">
+
+
+											<div class="mu-pricing-single-head">
+												<h4>FULL PACKAGE</h4>
+												<p class="mu-price-tag">
+													<span>RS</span> 2000
+												</p>
+											</div>
+
+											<ul class="mu-price-feature">
+											
+												<li> Unlimited Journal </li>
+												<li> Unlimited Chapters </li>
+												
+											</ul>
+
+											<div class="mu-pricing-single-footer">
+												<a href="#" class="mu-order-btn">Order Now!</a>
+											</div>
+											
+											
+										</div>
+									</div>
+									<!-- / Pricing Single Content -->
+
+
+								</div>
+							</div>
+							<!-- End Pricing Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Pricing -->
+
+		<!-- Start Testimonials -->
+		<section id="mu-testimonials">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-testimonials-area">
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title">What Our Readers Says</h2>
+								<span class="mu-header-dot"></span>
+							</div>
+
+							<div class="mu-testimonials-block">
+								<ul class="mu-testimonial-slide">
+
+									<li>
+										<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
+										<img class="mu-rt-img" src="assets/images/reader-1.jpg" alt="img">
+										<h5 class="mu-rt-name"> - Alice Boga</h5>
+										<span class="mu-rt-title">CEO, Apple Inc.</span>
+									</li>
+
+									<li>
+										<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
+										<img class="mu-rt-img" src="assets/images/reader-2.jpg" alt="img">
+										<h5 class="mu-rt-name"> - Jhon Doe</h5>
+										<span class="mu-rt-title">Director, Google Inc.</span>
+									</li>
+
+									<li>
+										<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
+										<img class="mu-rt-img" src="assets/images/reader-3.jpg" alt="img">
+										<h5 class="mu-rt-name"> - Jessica Doe</h5>
+										<span class="mu-rt-title">Web Developer</span>
+									</li>
+
+								</ul>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Testimonials -->
+
+	
+		<!-- Start Contact -->
+		<section id="mu-contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="mu-contact-area">
+
+							<div class="mu-heading-area">
+								<h2 class="mu-heading-title">Drop Us A Message</h2>
+								<span class="mu-header-dot"></span>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+							</div>
+
+							<!-- Start Contact Content -->
+							<div class="mu-contact-content">
+
+								<div id="form-messages"></div>
+								<form id="ajax-contact" method="post" action="mailer.php" class="mu-contact-form">
+									<div class="form-group">                
+										<input type="text" class="form-control" placeholder="Name" id="name" name="name" required>
+									</div>
+									<div class="form-group">                
+										<input type="email" class="form-control" placeholder="Enter Email" id="email" name="email" required>
+									</div>              
+									<div class="form-group">
+										<textarea class="form-control" placeholder="Message" id="message" name="message" required></textarea>
+									</div>
+									<button type="submit" class="mu-send-msg-btn"><span>SUBMIT</span></button>
+						        </form>
+
+							</div>
+							<!-- End Contact Content -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Contact -->
+
+		<!-- Start Google Map -->
+		<section id="mu-google-map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d589888.4396405783!2d-82.41588603632052!3d32.866951223053896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f9f727a4ed30eb%3A0xf2139b0c5c7ae1ec!2sDooley+Branch+Rd%2C+Millen%2C+GA+30442%2C+USA!5e0!3m2!1sen!2sbd!4v1497376364225" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</section>
+		<!-- End Google Map -->
+
+	</main>
+	
+	<!-- End main content -->	
+			
+			
+	<!-- Start footer -->
+	<footer id="mu-footer" role="contentinfo">
+		<div class="container">
+			<div class="mu-footer-area">
+				<div class="mu-social-media">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+				</div>
+				<p class="mu-copyright">&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
+			</div>
+		</div>
+
+	</footer>
+	<!-- End footer -->
+
+	
+	
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	<!-- Slick slider -->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <!-- Counter js -->
+    <script type="text/javascript" src="assets/js/counter.js"></script>
+    <!-- Ajax contact form  -->
+    <script type="text/javascript" src="assets/js/app.js"></script>
+   
+ 
+	
+    <!-- Custom js -->
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	
+    
+  </body>
+</html>

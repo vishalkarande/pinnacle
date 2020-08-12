@@ -61,11 +61,10 @@ include('include/config.php');
   <body>
 
    	
-  	<!-- Start Header -->
-	<header id="mu-header" class="" role="banner" style=" background-color: #fc9547;">
+  	<header id="mu-header" class="" role="banner" style="background-color:#ff871c;">
 		<div class="container" >
 			<nav class="navbar navbar-default mu-navbar">
-			  	<div class="container-fluid">
+			  	<div class="container-fluid"  >
 				    <!-- Brand and toggle get grouped for better mobile display -->
 				    <div class="navbar-header">
 				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -76,7 +75,7 @@ include('include/config.php');
 				      </button>
 
 				      <!-- Text Logo -->
-				      <a class="navbar-brand" href="index.html"><i class="fa fa-book" aria-hidden="true"></i> Kindle</a>
+	 <a class="navbar-brand" href="index.html"><img src="images/pinaccle.jpeg" style="height:55px;width:120px"></a>
 
 				      <!-- Image Logo -->
 				      <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
@@ -85,14 +84,13 @@ include('include/config.php');
 				    </div>
 
 				    <!-- Collect the nav links, forms, and other content for toggling -->
-				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
 				      	<ul class="nav navbar-nav mu-menu navbar-right">
-					        <li><a href="#">HOME</a></li>
-					        <li><a href="#mu-book-overview">OVERVIEW</a></li>
-					        <li><a href="#mu-author">AUTHOR</a></li>
-				            <li><a href="#mu-pricing">PRICE</a></li>
-				            <li><a href="#mu-testimonials">TESTIMONIALS</a></li>
-				            <li><a href="#mu-contact">CONTACT</a></li>
+					         <li><a href="index.php">HOME</a></li>
+					        <li><a href="aboutus.php">ABOUT US</a></li>
+					        <li><a href="book.php">BOOKS</a></li>
+				            
+				            <li><a href="contact.php">CONTACT</a></li>
 				      	</ul>
 				    </div><!-- /.navbar-collapse -->
 			  	</div><!-- /.container-fluid -->
@@ -144,6 +142,7 @@ include('include/config.php');
 								
 								
 								
+									
 								  	<!-- Start Header -->
 
 		<div class="container" style=" float: left;" >
@@ -170,9 +169,9 @@ include('include/config.php');
 				    <!-- Collect the nav links, forms, and other content for toggling -->
 				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" >
 				      	<ul class="nav navbar-nav mu-menu navbar-right" style=" background-color: #fc9547;">
-					        <li><a href="#">All Books</a></li>
-					        <li><a href="#mu-book-overview">Technical</a></li>
-					        <li><a href="#mu-author">Non-Technical</a></li>
+					        <li><a href="book.php">All Books</a></li>
+					        <li><a href="technicalbooks.php">Technical</a></li>
+					        <li><a href="nontech.php">Non-Technical</a></li>
 				            <li><a href="#mu-pricing">Magzines</a></li>
 				            <li><a href="#mu-testimonials">News Letters</a></li>
 				          
@@ -182,7 +181,6 @@ include('include/config.php');
 			</nav>
 		</div>
 
-								
 								
 								
 								

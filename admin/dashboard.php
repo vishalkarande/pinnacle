@@ -8,6 +8,8 @@ $requests = $QueryFire->getAllData('contact_enquiry',' 1');
 $books = $QueryFire->getAllData('books',' is_deleted=0');
 $journals = $QueryFire->getAllData('journal',' is_deleted=0');
 $chapters = $QueryFire->getAllData('chapter','is_deleted=0');
+$events = $QueryFire->getAllData('events',' is_deleted=0');
+$readers = $QueryFire->getAllData('readers',' 1');
 ?>
   <section class="content-header">
     <div class="container-fluid">
@@ -97,7 +99,7 @@ $chapters = $QueryFire->getAllData('chapter','is_deleted=0');
             <div class="icon">
               <i class="fas fa-users"></i>
             </div>
-            <a href="journal" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="journals" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -117,6 +119,34 @@ $chapters = $QueryFire->getAllData('chapter','is_deleted=0');
           </div>
         </div>
         <!-- ./col -->
+         <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3><?= count($events)?></h3>
+
+              <p>Total Events</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <a href="events" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+         <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3><?= count($readers)?></h3>
+
+              <p>Total Readers</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <a href="readers" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
       </div>
       <div class="row">
       </div>

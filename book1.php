@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php
 session_start();
 error_reporting(0);
@@ -61,11 +74,10 @@ include('include/config.php');
   <body>
 
    	
-  	<!-- Start Header -->
-	<header id="mu-header" class="" role="banner" style="background-color:#ff871c;">
-		<div class="container">
+ 	<header id="mu-header" class="" role="banner" style="background-color:#ff871c;">
+		<div class="container" >
 			<nav class="navbar navbar-default mu-navbar">
-			  	<div class="container-fluid">
+			  	<div class="container-fluid"  >
 				    <!-- Brand and toggle get grouped for better mobile display -->
 				    <div class="navbar-header">
 				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -76,7 +88,7 @@ include('include/config.php');
 				      </button>
 
 				      <!-- Text Logo -->
-				      <a class="navbar-brand" href="index.html"><img src="images/pinaccle.jpeg" style="height:55px;width:120px"></a>
+	 <a class="navbar-brand" href="index.html"><img src="images/pinaccle.jpeg" style="height:55px;width:120px"></a>
 
 				      <!-- Image Logo -->
 				      <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
@@ -85,9 +97,9 @@ include('include/config.php');
 				    </div>
 
 				    <!-- Collect the nav links, forms, and other content for toggling -->
-				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
 				      	<ul class="nav navbar-nav mu-menu navbar-right">
-					        <li><a href="index.php">HOME</a></li>
+					         <li><a href="index.php">HOME</a></li>
 					        <li><a href="aboutus.php">ABOUT US</a></li>
 					        <li><a href="book.php">BOOKS</a></li>
 				            
@@ -100,112 +112,197 @@ include('include/config.php');
 	</header>
 	<!-- End Header -->
 
+	<!-- Start Featured Slider -->
+	  
+	  
+
+	<!-- Start Featured Slider -->
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 
 
-		<!-- Start Author -->
-		<section id="mu-author">
+		<!-- Start Book Overview -->
+		<section id="mu-book-overview" style="padding-top:30px">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="mu-author-area">
+						<div class="mu-book-overview-area">
 
 							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Book</h2>
+								<h2 class="mu-heading-title">All Books</h2>
 								<span class="mu-header-dot"></span>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+							
+								
+								
+								
+								
+								
+								
+								
+											
+								  	<!-- Start Header -->
+
+		<div class="container" style=" float: left;" >
+			<nav class="navbar navbar-default mu-navbar">
+			  	<div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				     <div class="navbar-header" >
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false" style=" background-color: #1c1b1b;">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+
+				      <!-- Text Logo -->
+				    
+
+				      <!-- Image Logo -->
+				      <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png"></a> -->
+
+
+				    </div>
+
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" >
+				      	<ul class="nav navbar-nav mu-menu navbar-right" style=" background-color: #fc9547;">
+					        <li><a href="book.php">All Books</a></li>
+					        <li><a href="technicalbooks.php">Technical</a></li>
+					        <li><a href="nontech.php">Non-Technical</a></li>
+				            <li><a href="#mu-pricing">Magzines</a></li>
+				            <li><a href="#mu-testimonials">News Letters</a></li>
+				          
+				      	</ul>
+				    </div><!-- /.navbar-collapse -->
+			  	</div><!-- /.container-fluid -->
+			</nav>
+		</div>
+
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
 							</div>
 
-							<!-- Start Author Content -->
-							<div class="mu-author-content">
+							<!-- Start Book Overview Content -->
+							<div class="mu-book-overview-content" >
 								<div class="row">
-									<div class="col-md-6">
-										<div class="mu-author-image">
-											
-											<?php
-											
-												$ret=mysqli_query($con,"select * from books  where id=1");
-											//	$row=mysqli_fetch_array($ret);
+										<?php
 												
+												$ret=mysqli_query($con,"select * from books ");
 												
-												while($row=mysqli_fetch_array($ret)){
-											
-											
-											
-											?>
-											
-											<img src="images/books/<?php echo htmlentities($row['image_name']); ?>" alt="Author Image" style="height:506px;width:800px">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="mu-author-info">
-											<h3><?php
-												
-											
 	
 												
-															echo htmlentities($row['name']);
+															while($row=mysqli_fetch_array($ret)){
 		
 		
 		
+														
 												
 												
-												
-												?></h3>
-											<p>
+												?>
+
+									<!-- Book Overview Single Content -->
+									<div class="col-md-3 col-sm-6">
+										<div class="mu-book-overview-single" style="padding-top:20px;height: 500px">
 											
-											<?php
+												<img src="images/books/<?php  echo htmlentities($row['image_name']); ?>" style="height:350px;width:250px">
 												
 											
-	
 												
-															echo htmlentities($row['discription']);
-		
-		
-		
 												
+												
+												
+												
+												
+										
+											<h4>	
+											<?php	echo htmlentities($row['name']);
 												
 												
 												?>
 											
 											
-											
-											</p>
-
-											<h4>Rate :  <?php
-												
-											
-	
-												
-															echo htmlentities($row['price']);
-		
-		
-		
-												}
+											</h4>
+											<p>		<?php	echo htmlentities($row['discription']);
 												
 												
-												?></h4>
-											
-
-											<div class="mu-author-social">
-												<a href="#"><i class="fa fa-facebook"></i></a>
-												<a href="#"><i class="fa fa-twitter"></i></a>
-												<a href="#"><i class="fa fa-linkedin"></i></a>
-												<a href="#"><i class="fa fa-google-plus"></i></a>
-											</div>
-
+												?></p>
 										</div>
 									</div>
+									<!-- / Book Overview Single Content -->
+									
+									<?php } ?>
+
+									
+
 								</div>
 							</div>
-							<!-- End Author Content -->
+							<!-- End Book Overview Content -->
 
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- End Author -->
+		<!-- End Book Overview -->
 
 		
+
+	
+	
+	<!-- End main content -->	
+			
+			
+	<!-- Start footer -->
+	<footer id="mu-footer" role="contentinfo">
+		<div class="container">
+			<div class="mu-footer-area">
+				<div class="mu-social-media">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+				</div>
+				<p class="mu-copyright">&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
+			</div>
+		</div>
+
+	</footer>
+	<!-- End footer -->
+
+	
 	
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -227,51 +324,4 @@ include('include/config.php');
     
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
